@@ -1,0 +1,20 @@
+<h3>
+  This is component showing creating new service called <b>my-service</b>, it works!
+</h3>
+
+<label for="twoWayBinding">Two way binding by [(ngModel)]</label> :
+  <input type="text" name="message" id="twoWayBinding"  [(ngModel)]="messageFromService.name">
+<br><br>
+<label for="oneWayBinding">Value-In template binding by [ngModel] & Value-Out binding with event (ngModelChange) </label>
+  <input type="text" name="message" id="oneWayBinding"  [ngModel]="messageFromService.name"  (ngModelChange)="onMessageChange($event)">
+
+<br><br>
+Value-Out event binding with functions decrement() & increment() : 
+<button (click)="decrement()" >-</button> {{messageFromService.id}} <button (click)="increment()" >+</button>
+
+<br><br>
+<b>messageFromService: </b> {{messageFromService | json}}
+
+
+
+

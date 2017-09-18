@@ -1,0 +1,26 @@
+<p>
+  <b>original text (no pipe):</b> {{name}} <br>
+  <b>lowercase pipe:</b>  {{name | lowercase}} <br>
+  <b>uppercase pipe:</b> {{name | uppercase}} <br>
+  <b>original date (no pipe) :</b> {{dob}} <br>
+  <b>date pipe: </b> {{dob | date}} <br> 
+
+  <b>date pipe with 'medium' param: </b> {{dob | date: 'medium'}} <br> 
+  <b>date pipe with 'shortTime' param: </b> {{dob | date: 'shortTime'}} <br> 
+  <b>date pipe with 'mmss' param: </b> {{dob | date: 'mmss'}} <br> 
+  <b>date pipe with 'hh:mm:ss a' param: </b> {{dob | date: 'hh:mm:ss a'}} <br> 
+  <b>date pipe with 'HH:mm:ss' param: </b> {{dob | date: 'HH:mm:ss'}} <br> 
+  <br>
+  here is pipe chaining<br>
+  <b>date pipe with 'medium' param and uppercase pipe: </b> {{dob | date: 'medium' | uppercase}} <br> 
+</p>
+
+<h4>Custom Pipe:</h4>
+<p>
+  <b>Original array:</b> {{arr}}
+  <br>
+  <b>Ascending sort:</b> {{arr | customPipe: 'asc'}}
+  <br>
+  <b>Descending sort:</b> {{arr | customPipe: 'desc'}}
+  <br>
+</p>

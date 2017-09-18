@@ -1,0 +1,35 @@
+<p>
+  This is the condtional operators demos.
+</p>
+
+<p *ngIf="isTrue">
+  This text is shown when isTrue is true, ref *ngIf.
+</p>
+
+<p *ngIf="!isFalse">
+  This text is shown when isFalse is false, ref *ngIf with negation(!).
+</p>
+
+<p> <b>Object representation:</b> <br>
+  Name: {{obj.name}}<br>
+  Address: {{obj.address}} <br>
+  Country: {{obj.country}} <br>
+  Currency: {{obj.currency}}
+</p>
+
+<p>
+    <b>list of items from array</b>
+</p>
+<ul>
+  <li *ngFor="let item of arr">{{item.name}}, {{item.address}}, {{item.country}}, {{item.currency}} </li>
+</ul>
+
+
+<p>
+    <b>this is if-else template demo</b><br>
+</p>
+<div *ngIf="isFalse; then firstTemplate else secondTemplate;">condition valid</div>
+<ng-template #firstTemplate>This is the First template, shown from if block.</ng-template>
+<ng-template #secondTemplate>This is the Second template, shown from else block.</ng-template>
+  
+  

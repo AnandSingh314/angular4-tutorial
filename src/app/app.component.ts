@@ -1,3 +1,4 @@
+import { MyDataService } from './my-data.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'my-dream-app';
+
+  constructor(private newService: MyDataService) {
+  }
+
+  messageFromServiceInApp = this.newService.obj;
+
 }

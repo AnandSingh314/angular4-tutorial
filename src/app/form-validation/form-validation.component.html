@@ -1,0 +1,23 @@
+<h3>form-validation</h3>
+<p style="font-size: 14px; font-weight: normal;">
+   Custome and inbuilt form validation support demo.
+</p>
+
+<form action="" class="container" (ngSubmit)="onSubmit(myForm)" 
+                        [formGroup]="myForm" novalidate required > 
+    <input type="text" name="firstName" placeholder="firstName" formControlName="firstName" >
+    <br>
+    <input type="text" name="lastName" id="" placeholder="lastName" formControlName="lastName" >
+    <br>
+    <input type="text" name="phone" id="" placeholder="phone" formControlName="phone" >
+    <br>
+    <select name="languages" id="" formControlName="languages">
+        <option value="C++">C++</option>
+        <option value="java">java</option>
+        <option value="Angular">angular</option>
+    </select>
+    <br><br>
+    <input [disabled]="!myForm.valid" type="submit" value="submit">
+</form>
+
+

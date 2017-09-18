@@ -1,0 +1,16 @@
+<h2>base-converter-spa</h2>
+<p style="font-size: 14px; font-weight: normal;">
+  this the base converter application, will demonstrate the FormModules use case.
+</p>
+
+<form action="" class="container" [formGroup]="appPane">
+
+  <input (ngModelChange)="onDecimalChange(oldValue, newValue=$event)" type="text" name="decimal" id="" placeholder="decimal" formControlName="decimal">
+  <br>
+  <input (ngModelChange)="onBinaryChange(oldValue, newValue=$event)" type="text" name="binary" id="" placeholder="binary" formControlName="binary">
+  <br>
+  <input (ngModelChange)="onOctalChange(oldValue, newValue=$event)" type="text" name="octal" id="" placeholder="octal" formControlName="octal">
+  <br>
+  <input (ngModelChange)="onHexaChange(oldValue, newValue=$event)" type="text" name="hexa" id="" placeholder="hexa" formControlName="hexa">
+
+</form>

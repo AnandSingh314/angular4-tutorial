@@ -1,0 +1,23 @@
+<h3>model-driven-form works!</h3>
+<p style="font-size: 14px; font-weight: normal;">
+    Most of the work will happen in the component's html section(or template) to fecth the form data in component's ts file. This methedology is named as <b>Template Driven Form</b>.
+    <br>
+    But in case of <b>Model Driven Form</b>,  component's ts file will fetch the data from template.
+</p>
+
+<form action="" class="container" (ngSubmit)="onSubmit(myForm)" 
+                        [formGroup]="myForm" novalidate required > 
+    <input type="text" name="firstName" placeholder="firstName" formControlName="firstName" required>
+    <br>
+    <input type="text" name="lastName" id="" placeholder="lastName" formControlName="lastName" required>
+    <br>
+    <select name="languages" id="" formControlName="languages">
+        <option value="C++">C++</option>
+        <option value="java">java</option>
+        <option value="Angular">angular</option>
+    </select>
+    <br><br>
+    <input type="submit" value="submit">
+</form>
+
+

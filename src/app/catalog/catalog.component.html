@@ -1,0 +1,24 @@
+<p>
+  this is my {{componentName}}, it works!
+</p>
+
+<input type="text" placeholder="enter the running text" [(ngModel)]="runningText" >
+<p >Display: {{runningText}} </p>
+<p >Bold Display: <b> {{runningText}} </b></p>
+
+<h3>data binding things</h3>
+<ol>
+  <li>
+    one way binding or model to view binding or ts to html <br>
+    <input type="text" [value]="data1" placeholder=" property based binding"> = &nbsp;&nbsp;&nbsp; {{data1}} <br>
+    <input type="text" value = "{{data2}}" placeholder=" interpolation based binding"> = &nbsp;&nbsp;&nbsp; {{data2}} <br>
+  </li><br>
+  <li>
+    2-way data binding(2-wdb), model &lt;=&gt; view binding or ts to/from html <br>
+    <input type="text" placeholder=" ngModel directive based binding" [(ngModel)]="data3" > = &nbsp;&nbsp;&nbsp; {{data3}} <br>
+    <input type="text" value = "{{data4}}" (input)="changeData4($event)" placeholder=" using event calling function "> = &nbsp;&nbsp;&nbsp; {{data4}} <br>
+  </li>
+</ol>
+
+
+
