@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-categories',
@@ -7,11 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriesComponent implements OnInit {
 
-  componentName = 'Categories Component';
+  private componentName = 'Categories Component';
 
-  constructor() { }
+  @ViewChild('myTemplVar')
+  private templateVariable;
 
-  ngOnInit() {
+  private canPrint = false;
+
+  constructor() {
   }
 
+  ngOnInit() {
+
+    setInterval(() => this.send2Server(), 2000);
+
+  }
+
+  send2Server() {
+    let data = this.templateVariable.nativeElement;
+    if (this.canPrint) {
+      console.log(data.value);
+    }
+  }
 }

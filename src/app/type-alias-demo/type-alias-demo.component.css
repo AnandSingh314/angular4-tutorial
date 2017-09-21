@@ -1,0 +1,8 @@
+.container{
+    border: 2px solid #FF0000;
+    max-width: 50%;
+    position: relative;
+    margin-top: 5%;
+    margin-left: 25%;
+    padding-bottom: 5%;
+}

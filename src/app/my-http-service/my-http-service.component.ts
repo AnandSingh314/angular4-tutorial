@@ -13,14 +13,14 @@ export class MyHttpServiceComponent implements OnInit {
   people: any;
 
   constructor(private http: Http, private newService: MyDataService) {
-   }
+  }
 
   ngOnInit() {
     // this.newService.fetchData();
     this.http
-        .get('../data/httpServiceMockData.json')
-        .map(response => response.json())
-        .subscribe(this.next, this.error, this.complete);
+      .get('../data/httpServiceMockData.json')
+      .map(response => response.json())
+      .subscribe(this.next, this.error, this.complete);
     // this.http.get('../data/httpServiceMockData.json').subscribe((data)=>{console.log(data.json())});
   }
 
@@ -41,8 +41,8 @@ export class MyHttpServiceComponent implements OnInit {
   onClickBtn() {
     console.log('this is the new serivice');
     this.http
-    .get('../data/httpServiceMockData.json')
-    .map(response => response.json())
-    .subscribe(this.next, this.error, this.complete);
+      .get('../data/httpServiceMockData.json')
+      .map(response => response.json())
+      .subscribe(this.next, this.error, this.complete);
   }
 }

@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>Child template:</h2>
+
+  <br> <b>Parent's Message: </b> {{parentMessage}}
+
+  <br><br> <b>Enter child message: </b>
+  <input type="text" name="" id="" 
+         [(ngModel)]="childMessage" 
+         (input)="fire()" 
+         placeholder="Enter message for parent">
+   {{childMessage}}
+</div>

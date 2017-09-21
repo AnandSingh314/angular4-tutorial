@@ -7,7 +7,9 @@ export class MyNewDirectiveDirective {
   element: any;
   noOfClick: number;
 
-  @Input('callerName') car;
+  // tslint:disable-next-line:no-input-rename
+  @Input('firstInput') car;
+  @Input() private callerName: String;
 
   constructor(element: ElementRef) {
     this.noOfClick = 0;
@@ -33,7 +35,8 @@ export class MyNewDirectiveDirective {
   @HostListener('click')
   onClick() {
     this.element.style.color = 'green';
-    console.log('clicked on ' + this.car + ', number: ' + ++this.noOfClick);
+    console.log('clicked on ' + this.car + ', renamed in @Input number: ' + ++this.noOfClick);
+    console.log('clicked on ' + this.callerName + ', number: ' + ++this.noOfClick);
   }
 
   @HostListener('dblclick')

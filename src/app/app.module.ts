@@ -22,9 +22,16 @@ import { MyServiceComponent } from './my-service/my-service.component';
 import { MyHttpServiceComponent } from './my-http-service/my-http-service.component';
 import { CustomDirectivesComponent } from './custom-directives/custom-directives.component';
 import { MyNewDirectiveDirective } from './my-new-directive.directive';
+import { AdvanceRoutingComponent } from './advance-routing/advance-routing.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { TypeAliasDemoComponent } from './type-alias-demo/type-alias-demo.component';
 
 
 const appRoutes: Routes = [
+  {
+    path: '',
+    component: CatalogComponent
+  },
   {
     path: 'catalog',
     component: CatalogComponent
@@ -72,8 +79,18 @@ const appRoutes: Routes = [
   {
     path: 'custom-directive',
     component: CustomDirectivesComponent
+  },
+  {
+    path: 'advance-routing/:username/:name', // url param declaration, only this pattern is allowed '/:param'
+    component: AdvanceRoutingComponent
+  },
+
+  // last route for the PageNotFound Template
+  {
+    path: '**',
+    component: PageNotFoundComponent
   }
-] ;
+];
 
 @NgModule({
   declarations: [
@@ -91,7 +108,10 @@ const appRoutes: Routes = [
     MyServiceComponent,
     MyHttpServiceComponent,
     CustomDirectivesComponent,
-    MyNewDirectiveDirective
+    MyNewDirectiveDirective,
+    AdvanceRoutingComponent,
+    PageNotFoundComponent,
+    TypeAliasDemoComponent
   ],
   imports: [
     BrowserModule,
@@ -99,7 +119,7 @@ const appRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot( appRoutes , {
+    RouterModule.forRoot(appRoutes, {
       enableTracing: true
     })
   ],
