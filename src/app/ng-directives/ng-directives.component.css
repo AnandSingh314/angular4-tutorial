@@ -1,0 +1,43 @@
+.container {
+    background-color: #aeaeae;
+}
+
+
+.circle {
+	width: 150px;
+	height: 150px;
+	background: #E44D87;
+	-moz-border-radius: 150px;
+	-webkit-border-radius: 150px;
+	border-radius: 150px;
+}
+
+.oval {
+	width: 200px;
+	height: 100px;
+	background: #8CD882;
+	-moz-border-radius: 100px / 50px;
+	-webkit-border-radius: 100px / 50px;
+	border-radius: 100px / 50px;
+}
+
+.triangle {
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid #AAC223;
+}
+
+.rectangle {
+	width: 200px;
+	height: 100px;
+	background: #E27474;
+}
+
+.square {
+	width: 100px;
+	height: 100px;
+	background: #6330DA;
+}
+

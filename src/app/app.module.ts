@@ -25,6 +25,8 @@ import { MyNewDirectiveDirective } from './my-new-directive.directive';
 import { AdvanceRoutingComponent } from './advance-routing/advance-routing.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TypeAliasDemoComponent } from './type-alias-demo/type-alias-demo.component';
+import { NgDirectivesComponent } from './ng-directives/ng-directives.component';
+import { DependencyInjectionComponent } from './dependency-injection/dependency-injection.component';
 
 
 const appRoutes: Routes = [
@@ -84,7 +86,14 @@ const appRoutes: Routes = [
     path: 'advance-routing/:username/:name', // url param declaration, only this pattern is allowed '/:param'
     component: AdvanceRoutingComponent
   },
-
+  {
+    path: 'ngdirective',
+    component: NgDirectivesComponent
+  },
+  {
+    path: 'di',
+    component: DependencyInjectionComponent
+  },
   // last route for the PageNotFound Template
   {
     path: '**',
@@ -111,7 +120,9 @@ const appRoutes: Routes = [
     MyNewDirectiveDirective,
     AdvanceRoutingComponent,
     PageNotFoundComponent,
-    TypeAliasDemoComponent
+    TypeAliasDemoComponent,
+    NgDirectivesComponent,
+    DependencyInjectionComponent
   ],
   imports: [
     BrowserModule,
